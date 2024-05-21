@@ -7,11 +7,11 @@ from pymongo import MongoClient
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
-MONGODB_URI = os.environ.get("mongodb+srv://test:<password>@atlascluster.0eqs6n4.mongodb.net/")
+MONGODB_URI = os.environ.get("mongodb+srv://test:<sparta>@atlascluster.0eqs6n4.mongodb.net/")
 DB_NAME =  os.environ.get("DB_hotmauli sinaga")
 
-client = MongoClient(MONGODB_URI)
-db = client[DB_NAME]
+client = MongoClient("MONGODB_mongodb+srv://test:<sparta>@atlascluster.0eqs6n4.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster")
+db = client[DB_hotmauli]
 
 app = Flask(__name__)
 
